@@ -2,10 +2,9 @@ package com.macro.mall.malltinymybatis.mbg.model;
 
 import java.io.Serializable;
 
-/**
- * @author Slience
- */
+
 public class PmsBrand implements Serializable {
+
     private Long id;
 
     private String name;

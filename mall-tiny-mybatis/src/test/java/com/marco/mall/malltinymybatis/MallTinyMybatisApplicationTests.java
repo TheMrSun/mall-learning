@@ -4,10 +4,17 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MallTinyMybatisApplicationTests {
+public class MallTinyMybatisApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
+
+    }
+
+    @Test
+    public void test(){
+        System.out.println();
+
     }
 
 }

@@ -19,7 +19,7 @@ public class Generator {
         //MBG 执行过程中的警告信息
         List<String> warnings = new ArrayList<>();
         //代码重复时，是否进行覆盖
-        boolean overwrite = true;
+        boolean overwrite = false;
         //读取MBG 配置文件
         InputStream is = Generator.class.getResourceAsStream("/generatorConfig.xml");
         //创建配置解析器

@@ -5,10 +5,6 @@ import com.macro.mall.malltinymybatis.mbg.model.PmsBrandExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-
-/**
- * @author Slience
- */
 public interface PmsBrandMapper {
     int countByExample(PmsBrandExample example);
 
