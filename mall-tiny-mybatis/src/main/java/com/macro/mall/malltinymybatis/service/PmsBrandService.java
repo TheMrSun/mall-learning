@@ -30,4 +30,27 @@ public interface PmsBrandService {
      * @return 更新结果
      */
     int updateBrand(Long id,PmsBrand pmsBrand);
+
+    /**
+     * 删除指定id的品牌信息
+     * @param id 品牌标识
+     * @return 删除结果
+     */
+    int deleteBrand(Long id);
+
+    /**
+     * 分页查询
+     * @param pageNum 页数
+     * @param pageSize 页面数据量
+     * @return 分页查询结果
+     */
+    List<PmsBrand> listBrand(Integer pageNum,Integer pageSize);
+
+    /**
+     * 根据品牌标识查询品牌具体信息
+     * @param id 标识id
+     * @return 品牌信息
+     */
+    PmsBrand getBrand(Long id);
+
 }

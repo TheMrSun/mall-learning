@@ -1,5 +1,6 @@
 package com.macro.mall.malltinymybatis.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.macro.mall.malltinymybatis.mbg.mapper.PmsBrandMapper;
 import com.macro.mall.malltinymybatis.mbg.model.PmsBrand;
 import com.macro.mall.malltinymybatis.mbg.model.PmsBrandExample;
@@ -33,5 +34,21 @@ public class PmsBrandServiceImpl implements PmsBrandService {
     public int updateBrand(Long id, PmsBrand pmsBrand) {
         pmsBrand.setId(id);
         return this.pmsBrandMapper.updateByPrimaryKeySelective(pmsBrand);
+    }
+
+    @Override
+    public int deleteBrand(Long id) {
+        return this.pmsBrandMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public List<PmsBrand> listBrand(Integer pageNum, Integer pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        return this.pmsBrandMapper.selectByExample(new PmsBrandExample());
+    }
+
+    @Override
+    public PmsBrand getBrand(Long id) {
+        return this.pmsBrandMapper.selectByPrimaryKey(id);
     }
 }
